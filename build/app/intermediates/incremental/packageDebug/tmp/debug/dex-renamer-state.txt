@@ -1,4 +1,4 @@
-#Fri Jul 31 09:35:57 NPT 2020
+#Fri Jul 31 20:32:54 NPT 2020
 base.0=/home/sumit/Documents/FLUTTER/WeatherApp/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
