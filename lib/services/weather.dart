@@ -5,6 +5,13 @@ import 'networking.dart';
 const openWeatherUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 class WeatherModel {
+  Future<dynamic> getCityWeather(String cityName) async {
+    NetworkHelper _networkHelperForCity = NetworkHelper(
+        url: "$openWeatherUrl?q=$cityName&appid=$apiKey&units=metric");
+    var cityWeatherData = await _networkHelperForCity.getWeatherData();
+    return cityWeatherData;
+  }
+
   Future<dynamic> getLocationWeatherData() async {
     Location _location = Location();
     await _location.getCurrentLocation();

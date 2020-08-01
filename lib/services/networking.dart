@@ -8,7 +8,7 @@ class NetworkHelper {
   final String url;
 
   Future getWeatherData() async {
-    http.Response response = await http.get(url);
+    http.Response response = await http.get(url).timeout(Duration(seconds: 10));
     var jsonData = response.body;
     if (response.statusCode == 200) {
       return jsonDecode(jsonData);

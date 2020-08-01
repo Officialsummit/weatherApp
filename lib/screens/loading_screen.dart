@@ -1,5 +1,6 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 import 'package:clima/services/weather.dart';
 
 import 'location_screen.dart';
@@ -29,16 +30,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SpinKitFadingFour(
-              color: Colors.white,
-              size: 100.0,
-            ),
-            Text("Fetching data , wait a white...")
-          ],
+      backgroundColor: Colors.blue,
+      body: Container(
+        child: Center(
+          child: FlareActor(
+            'images/Loading.flr',
+            animation: "Untitled",
+          ),
         ),
       ),
     );
